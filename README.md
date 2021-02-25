@@ -1,4 +1,4 @@
-This is an open source repo to create a basic website using React and Stripe.
+This is a copyrighted repo example to create a basic website using React and Stripe.
 
 To run type in the root
 npm start
