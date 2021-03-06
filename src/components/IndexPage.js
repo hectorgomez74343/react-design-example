@@ -90,8 +90,8 @@ class IndexPage extends React.Component {
         />
         <SectionCaption>12 sections - 6 hours</SectionCaption>
         <SectionCellGroup>
-          {staticdata.cells.map((cell) => (
-            <Cell title={cell.title} image={cell.image} />
+          {staticdata.cells.map((cell, index) => (
+            <Cell key={index} title={cell.title} image={cell.image} />
           ))}
         </SectionCellGroup>
         <Footer

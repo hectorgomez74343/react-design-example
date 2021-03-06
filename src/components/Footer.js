@@ -63,8 +63,10 @@ const Footer = ({ data, children }) => (
     </Text>
     <Button>Tweet</Button>
     <LinkGroup>
-      {data.map((edge) => (
-        <a href={edge.url}>{edge.title}</a>
+      {data.map((edge, index) => (
+        <a key={index} href={edge.url}>
+          {edge.title}
+        </a>
       ))}
     </LinkGroup>
     <Copyright>{children}</Copyright>

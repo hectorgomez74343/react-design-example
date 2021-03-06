@@ -15,7 +15,7 @@ class Header extends React.Component {
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll = (event) => {
+  handleScroll = () => {
     const scrollTop = window.pageYOffset;
 
     if (scrollTop > 50) {
@@ -23,24 +23,6 @@ class Header extends React.Component {
     } else {
       this.setState({ hasScrolled: false });
     }
-  };
-
-  handlePurchase = (token) => {
-    const amount = 5000;
-    const description = "My awesome product";
-
-    const bodyObject = {
-      tokenId: token.id,
-      email: token.email,
-      name: token.name,
-      description,
-      amount,
-    };
-
-    fetch("http://localhost:9000/stripe-charge", {
-      method: "POST",
-      body: JSON.stringify(bodyObject),
-    });
   };
 
   render() {
